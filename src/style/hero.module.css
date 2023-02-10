@@ -1,0 +1,68 @@
+.hero_section {
+  opacity: 0;
+  animation: 1s cubic-bezier(0.645, 0.045, 0.355, 1) 0.75s 1 upToDown;
+  animation-fill-mode: forwards;
+}
+
+.heading {
+  margin: 0;
+  margin-top: 5rem;
+  font-size: 5.3rem;
+  font-weight: 500;
+  color: #8bffe4;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+
+.name {
+  font-weight: 400;
+  font-size: 3rem;
+  margin: 0;
+  margin-top: 2rem;
+  color: #ccd6f6;
+}
+.description {
+  font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2.3rem;
+  font-weight: 300;
+  line-height: 1.4;
+  max-width: 73rem;
+  color: #b9c8f5;
+}
+
+.description span a {
+  font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2.3rem;
+  font-weight: 300;
+  line-height: 1.4;
+  max-width: 73rem;
+  color: #b9c8f5;
+  text-decoration: none;
+  position: relative;
+}
+
+.description span a::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 66%;
+  left: -0.1rem;
+  right: -0.1rem;
+  bottom: 0;
+  transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
+  background-color: rgba(79, 192, 177, 0.5);
+}
+
+.description span a:hover::after {
+  top: 10%;
+}
+@keyframes upToDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
